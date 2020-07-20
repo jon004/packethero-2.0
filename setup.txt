@@ -178,6 +178,6 @@ Part 6: Final Touch ups
 
 Usefull Links:
   SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
-  Nginx: 
+  Nginx:
   SQLAlchemy:
   
