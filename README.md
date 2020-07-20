@@ -57,46 +57,48 @@ Wait...
 (until terminal loads, try refreshing page if it takes a while)
 
 
-# DB Table
-Step 4: Creating Database Tables
+## DB Table ##
+**Step 4: Creating Database Tables**
+
 After your terminal has loaded
-Type: gcloud sql connect packethero-db --user=root --quiet
-Make sure your database name matches
-Hit Enter
-Wait...
-Enter Password
+- Type: gcloud sql connect packethero-db --user=root --quiet
+- Make sure your database name matches
+- Hit Enter
+- Wait...
+- Enter Password
+
 Copy and Paste the following, hit enter, and then close the terminal
     
-CREATE DATABASE packethero;
-USE packethero;
-CREATE TABLE gamers (
-id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
-username VARCHAR(200) NOT NULL,
-teamname VARCHAR(200) NOT NULL,
-room VARCHAR(200) NOT NULL,
-admin INT NOT NULL,
-session VARCHAR(200) NOT NULL,
-song VARCHAR(200) NOT NULL
-);
-QUIT;
+    CREATE DATABASE packethero;
+    USE packethero;
+    CREATE TABLE gamers (
+        id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(200) NOT NULL,
+        teamname VARCHAR(200) NOT NULL,
+        room VARCHAR(200) NOT NULL,
+        admin INT NOT NULL,
+        session VARCHAR(200) NOT NULL,
+        song VARCHAR(200) NOT NULL
+    );
+    QUIT;
       
 
-# Packages
-Step 5: Installing Packages and Downloading Code
-Click -> Navigation Menu (1st button in header)
-Click -> Compute Engine
-Click -> SSH
-(Under the connect column of the table that loaded)
-Wait for the terminal to load
+## Packages ##
+**Step 5: Installing Packages and Downloading Code**
+- Click -> Navigation Menu (1st button in header)
+- Click -> Compute Engine
+- Click -> SSH (Under the connect column of the table that loaded)
+- Wait for the terminal to load
+
 Copy Paste the following:
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install python3 python3-pip python3-dev nginx git-all ufw
-git clone https://github.com/yonJM1267/packethero-2.0.git
-sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+    sudo apt-get -y install python3 python3-pip python3-dev nginx git-all ufw
+    git clone https://github.com/yonJM1267/packethero-2.0.git
+    sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
-Part 4: DB Connection
+## DB Connection ##
 Step 6: Configuring Database User Creds
 You will continue working in the terminal you opened in Part 3
 Enter -> nano packethero-2.0/apps.py
@@ -130,7 +132,7 @@ Copy -> Public IP address
 Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
 Exit the text editor with Ctrl + x
     
-Part 5: Nginx
+## Nginx ##
 Step 8: Configuring Nginx
 Enter the following commands
 sudo ufw allow 'Nginx Full'
@@ -176,25 +178,27 @@ proxy_pass http://0.0.0.0:5000;
 IMPORTANT: Replace domain-placeholder.com with your domain
 (Example: server_name packethero.baycyber.net;)
 
-Enter the following commands
-sudo ln -s /etc/nginx/sites-available/packethero /etc/nginx/sites-enabled/packethero
-sudo service nginx configtest
-sudo service nginx restart
+Run the following commands
 
-Part 6: Final Touch ups
-Step 9: SSL Cert
+    sudo ln -s /etc/nginx/sites-available/packethero /etc/nginx/sites-enabled/packethero
+    sudo service nginx configtest
+    sudo service nginx restart
+
+## Final Touch ups (ssl, how to run)##
+**Step 9: SSL Cert**
 Still in the terminal
 Run the following commands
-sudo apt-get -y install certbot python-certbot-nginx
-sudo certbot --nginx
-sudo certbot certonly --nginx
-(alternative: sudo certbot certonly --nginx --register-unsafely-without-email)
-sudo certbot renew --dry-run
+
+    sudo apt-get -y install certbot python-certbot-nginx
+    sudo certbot --nginx
+    sudo certbot certonly --nginx
+    (alternative: sudo certbot certonly --nginx --register-unsafely-without-email)
+    sudo certbot renew --dry-run
   
-Step 10: How to run your server
+**Step 10: How to run your server**
 Enter -> sudo python3 packethero-2.0/server.py
 
-Usefull Links:
+# Helpfull Links:
   SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
   Nginx:
   SQLAlchemy:
