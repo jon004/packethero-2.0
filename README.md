@@ -51,10 +51,8 @@ Instance Values to Change:
 - Wait... (until green check mark appears next to Instance ID)
 - Click -> packethero-db
 - Ctrl + f -> Connect using Cloud Shell
-
-Open up the terminal (5th to last button in header)
-Wait...
-(until terminal loads, try refreshing page if it takes a while)
+- Open up the terminal (5th to last button in header)
+- Wait... (until terminal loads, try refreshing page if it takes a while)
 
 
 ## DB Table ##
