@@ -159,6 +159,8 @@ Enter the following commands
 
 IMPORTANT: Change the domain name to match yours
 
+Example:
+
     server {
         server_name packethero.baycyber.net; # change domain
         ...
