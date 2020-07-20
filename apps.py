@@ -13,7 +13,7 @@ import time
 username = 'placeholder'
 passw = 'placeholder'
 host = 'placeholder'
-database = 'placeholder'
+database = 'packethero'
 port = 'placeholder'
 SECRET_KEY='placeholder'
 
