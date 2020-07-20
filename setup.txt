@@ -143,4 +143,9 @@ Part 5:
       }
       
       IMPORTANT: Replace domain_placeholder with your domain
-      (server_name packethero.baycyber.net;)
+      (Example: server_name packethero.baycyber.net;)
+
+      Enter the following commands
+        sudo ln -s /etc/nginx/sites-available/packethero /etc/nginx/sites-enabled/packethero
+        sudo service nginx configtest
+        sudo service nginx restart
