@@ -2,11 +2,12 @@
 
 ## Google Cloud Platform Set Up ##
 
-**Step 1: Creating a Project**
+**Step 1: GCP Project Set Up**
+Create project
 - Click -> project drop down menu (3rd button in header)
 - Click -> NEW PROJECT
 
-    Open the project.
+Open the project and load compute engine
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine *
 > note: Compute Engine set up automatically starts after clicking on it
