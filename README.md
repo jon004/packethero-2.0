@@ -6,7 +6,7 @@
 - Click -> project drop down menu (3rd button in header)
 - Click -> NEW PROJECT
 
-Open the project.
+    Open the project.
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine *
 > note: Compute Engine set up automatically starts after clicking on it
