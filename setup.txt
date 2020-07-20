@@ -20,7 +20,7 @@ Part 1: GCP
       Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
       Boot Disk: Debian GNU/Linux 10 (buster)
 
-  Step 2:
+  Step 3:
     Creating your MySQL Database
     Use the search bar in the header and type: Cloud SQL Admin API
     Click -> Cloud SQL Admin API
@@ -45,7 +45,7 @@ Part 1: GCP
     (until terminal loads, try refreshing page if it takes a while)
 
 Part 2:
-  Step 1:
+  Step 4:
     Creating Database Tables
     After your terminal has loaded
     Type: gcloud sql connect packethero-db --user=root --quiet
@@ -70,7 +70,7 @@ Part 2:
     Close Terminal
 
 Part 3:
-  Step 1:
+  Step 5:
     Uploading Code
     Click -> Navigation Menu (1st button in header)
     Click -> Compute Engine
@@ -84,5 +84,7 @@ Part 3:
       git clone https://github.com/yonJM1267/packethero-2.0.git
       pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
+Part 4:
+  Step 6:
 
 tBN5k9m4nynAgGr9
