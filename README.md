@@ -22,7 +22,7 @@ Wait for Compute Engine to finish setting up
 
 Make sure you're still in the project's compute engine
 
--Click -> Create Instance
+- Click -> Create Instance
 
 Instance Values to Change:
 
