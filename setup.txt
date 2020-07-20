@@ -108,12 +108,11 @@ Part 4:
     Replace their placeholders with the credentials you just created in GCP
     Replace the SECRET_KEY placeholder with a random alphanumerical string
     (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
-
-    We will modify the host and port variables later.    
     Ctrl + S -> This command saves the changes
     
+    Now we will find the values for the Host and Port variables
     Go back to GCP
-    Click -> CREATE to     
+    
 
 tBN5k9m4nynAgGr9
 
