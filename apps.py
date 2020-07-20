@@ -10,12 +10,12 @@ from random import randint
 import time
 
 # DB Variables
-username = ''
-passw = ''
-host = ''
-database = ''
-port = ''
-SECRET_KEY=''
+username = 'placeholder'
+passw = 'placeholder'
+host = 'placeholder'
+database = 'placeholder'
+port = 'placeholder'
+SECRET_KEY='placeholder'
 
 app = Flask(__name__, static_url_path='/', static_folder='web/public', template_folder='web/templates')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
