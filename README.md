@@ -11,7 +11,7 @@ Create project
 Open the project and load compute engine
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine *
-> *Note: Compute Engine set up automatically starts after clicking on it
+> * Note: Compute Engine set up automatically starts after clicking on it
 
 Wait for Compute Engine to finish setting up
 (To see set up statuses click on 3rd to last button in header)
@@ -59,7 +59,7 @@ Instance Values to Change:
 
 **Step 4: Creating Database Tables**
 
-After your terminal has loaded
+After your terminal has loaded access your database
 - Type: gcloud sql connect packethero-db --user=root --quiet
 - Make sure your database name matches
 - Hit Enter
@@ -106,20 +106,25 @@ Run these commands:
 You will continue working in the terminal you opened in Part 3
 Enter -> nano packethero-2.0/apps.py
 You'll be editing this file later
-    
-Leave this window open and go back to GCP
-Click -> Navigation Menu (1st button in header)
-Click -> SQL
-Click -> packethero-db
-Click -> Users
-Click -> Create user account
+
+
+Leave this window open and go back to GCP and create a user account for your database
+- Click -> Navigation Menu (1st button in header)
+- Click -> SQL
+- Click -> packethero-db
+- Click -> Users
+- Click -> Create user account
+
 Variables to Change:
-Username: Make one
-Password: Make one
-Host name: select -> Allow any host (%)
-Click -> CREATE
-Click -> Connections -> + Add Network
-Add the IP of the VM you created in Step 2 and click save
+
+    Username: Make one
+    Password: Make one
+    Host name: select -> Allow any host (%)
+
+Now whitelist your website's IP to give it access to the database
+- Click -> CREATE
+- Click -> Connections -> + Add Network
+- Add the IP of the VM you created in Step 2 and click save
    
 **Step 7: Configuring Code Variables**
 
@@ -127,12 +132,11 @@ Go back to the terminal and edit the following variables in packethero-2.0/app.p
     
     username, passw
 
-Replace their placeholders with the credentials you just created in GCP
+Replace the placeholders with the credentials you created in step 6
 Replace the SECRET_KEY placeholder with a random alphanumerical string
 (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
-- Ctrl + S -> This command saves the changes
 
-Go back to GCP (SQL page) and whitelist your website's IP to give it access to the database
+- Ctrl + S -> This command saves the changes
 - Click -> Overview
 - Copy -> Public IP address 
 - Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
