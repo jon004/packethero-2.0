@@ -3,6 +3,7 @@
 ## Google Cloud Platform Set Up ##
 
 **Step 1: GCP Project Set Up**
+
 Create project
 - Click -> project drop down menu (3rd button in header)
 - Click -> NEW PROJECT
