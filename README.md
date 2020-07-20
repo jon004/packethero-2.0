@@ -11,19 +11,22 @@ Create project
 Open the project and load compute engine
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine *
-> note: Compute Engine set up automatically starts after clicking on it
+> *Note: Compute Engine set up automatically starts after clicking on it
 
 Wait for Compute Engine to finish setting up
 (To see set up statuses click on 3rd to last button in header)
 
 
-Step 2: Creating a New VM Instance
+**Step 2: Creating a New VM Instance**
+
 Make sure you're still in the project's compute engine
-Click -> Create Instance
+-Click -> Create Instance
+
 Instance Values to Change:
-Name: packethero
-Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
-Boot Disk: Debian GNU/Linux 10 (buster)
+
+    Name: packethero
+    Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
+    Boot Disk: Debian GNU/Linux 10 (buster)
 
 
 Step 3: Creating a MySQL Database Instance
