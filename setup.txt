@@ -33,7 +33,7 @@ Part 1: GCP
     Click -> Choose MySQL
     Instance Values to Change:
       Instance ID: packethero-db
-      Root password: Click on Generate (copy the password somewhere)
+      Root password: Click on Generate (copy and save the password somewhere you can access later)
     Click -> Create
     Wait...
     (until green check mark appears next to Instance ID)
@@ -86,9 +86,29 @@ Part 3:
 
 Part 4:
   Step 6:
-    Configuring Code
-    Continue working in the terminal you opened in Part 3
+    Configuring Database
+    You will continue working in the terminal you opened in Part 3
     Enter -> nano packethero-2.0/apps.py
+    You'll be editing this file later
+    Leave this window open and go back to GCP
+    Click -> Navigation Menu (1st button in header)
+    Click -> SQL
+    Click -> packethero-db
+    Click -> Users
+    Click -> Create user account
+    Variables to Change:
+      Username: Make one
+      Password: Make one
+      Host name: select -> Allow any host (%)
+    Go back to the terminal and edit the following variables
+    username, passw
+    Replace the placeholders with the credentials you are about to create in GCP
+    Ctrl + S -> This command saves the changes
+    Go back to GCP
+    Click -> CREATE
     
 
 tBN5k9m4nynAgGr9
+
+jon
+!q@w#e$r%t
