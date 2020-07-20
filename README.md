@@ -21,6 +21,7 @@ Wait for Compute Engine to finish setting up
 **Step 2: Creating a New VM Instance**
 
 Make sure you're still in the project's compute engine
+
 -Click -> Create Instance
 
 Instance Values to Change:
