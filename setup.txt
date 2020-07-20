@@ -124,8 +124,9 @@ Part 5:
   Step 8:
     Configuring Nginx
     Enter the following commands
-      ufw delete allow 5000
-      ufw allow 'Nginx Full'
+    sudo ufw delete allow 5000
+    sudo ufw allow 'Nginx Full'
+    sudo uwsgi --socket 0.0.0.0:5000 --protocol=http -w wsgi:server
     Note: Getting "Could not delete non-existent rule" after running these commands is okay
     
     Enter -> sudo nano /etc/nginx/sites-available/packethero
