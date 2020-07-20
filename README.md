@@ -60,7 +60,11 @@ Instance Values to Change:
 **Step 4: Creating Database Tables**
 
 After your terminal has loaded access your database
-- Type: gcloud sql connect packethero-db --user=root --quiet
+
+You can do this in the terminal with this command
+    
+    gcloud sql connect packethero-db --user=root --quiet
+
 - Make sure your database name matches
 - Hit Enter
 - Wait...
