@@ -1,0 +1,86 @@
+# Packet Hero
+# TODO
+	-> review game.html
+	-> review '/game' server route(s)
+	-> review '' socket event(s)
+# How to Run (see requirements below*)
+Interactive web application intended to be ran off an Nginx web server.*
+
+
+# How To Run Locally (see requirements below*)
+# To run locally uncomment the following (this is at the very end of server.py)
+if __name__ == '__main__':
+	socketio.run(app, host='0.0.0.0', port=8080, debug=True)
+
+# then run the application
+python3 server.py
+
+
+# Below are all the Minimum Requirements to run this application**
+
+# Install the following Dependencies
+sudo apt-get update
+sudo apt-get install python3-pip python3-dev nginx
+pip3 install flask
+pip3 install flask_socketio
+pip3 install flask_login
+pip3 install flask_wtf
+pip3 install wtforms
+pip3 install eventlet
+pip3 install sqlalchemy
+pip3 install flask_sqlalchemy
+pip3 install pymysql
+pip3 install uwsgi
+
+# MYSQL Database - create database and the table before running application
+CREATE DATABASE packethero;
+USE packethero;
+CREATE TABLE gamers (
+	id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(200) NOT NULL,
+	teamname VARCHAR(200) NOT NULL,
+	room VARCHAR(200) NOT NULL,
+	admin INT NOT NULL,
+	session VARCHAR(200) NOT NULL,
+	song VARCHAR(200) NOT NULL
+);
+
+# Configure your mySQL connection
+Database configuration variables are under line 11 of apps.py
+Try ctr-f -> # DB Variables
+The configuarion variables should look like
+
+filename: apps.py
+->	# DB Variables
+->	username = ...
+->	passw = ...
+->	host = ...
+->	database = 'packethero'
+->	SECRET_KEY=...
+
+# set up server
+ufw delete allow 5000
+ufw allow 'Nginx Full'
+
+nano /etc/nginx/sites-available/packethero
+
+server {
+    listen 80;
+    server_name packethero.baycyber.net;
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-Ip $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+
+sudo ln -s /etc/nginx/sites-available/packethero /etc/nginx/sites-enabled/packethero
+sudo service nginx configtest
+sudo service nginx restart
+
+# after set up you can now run with..
+python3 /packethero/packethero.py

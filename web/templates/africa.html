@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='loading' id='loading'><p><img src='/img/loading.gif' alt='loading...'/></p></div>
+
+<style>
+	body{
+		background:#9494b8;
+ 		height: 1400px;
+		font-family: 'Manrope', sans-serif;
+		border-box:box-shadow;
+	}
+	.frame-wrapper{
+		display: block;
+		position: absolute;
+		margin-left: calc(50% - (600px / 2));
+		top: 60px;
+  		width: 600px;
+		background: #fff;
+ 		border-radius: 10px;
+  		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.frame-wrapper .inner-wrapper{
+		display:block;
+		margin:25px;
+		padding-top:3px;
+		border-radius: 10px;
+		background:white;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.frame-wrapper .button{
+		font-size:13px;
+		height:33px;
+		width:95px;
+		margin: 25px 10px;
+		border-radius:3px;
+		color:black;
+		background:#94b8a6;
+  		cursor: pointer;
+		border:none;
+ 		transition: all 0.4s;
+		/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+	}
+	.frame-wrapper .button:hover{
+		background:#383845;
+		color:white;
+	}
+	.frame-wrapper h1{
+		font-family: 'Baloo Tamma 2', cursive;
+		text-align:center;
+	}
+	.frame-wrapper h3{
+		text-align:center;
+		margin-bottom:0px;
+	}
+
+</style>
+
+<div class="frame-wrapper">
+
+
+	<h1>'Africa' by Toto</h1>
+
+
+	<div class="inner-wrapper">
+
+		<h3>Part 1</h3>
+		<center>
+		<!-- Buttons for Part 1 Song bits  -->
+		<button class="button" onclick="play_frame('/audio/africa/africa2.mp3')">Frame {{ names[1] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa4.mp3')">Frame {{ names[3] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa7.mp3')">Frame {{ names[6] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa5.mp3')">Frame {{ names[4] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa1.mp3')">Frame {{ names[0] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa6.mp3')">Frame {{ names[5] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa3.mp3')">Frame {{ names[2] }}</button>
+		</center>
+	</div>
+
+
+	<!-- ------------------------------ PART 2 ----------------------------- -->
+	<div class='inner-wrapper'>
+
+		<h3>Part 2</h3>
+		<center>
+		<!-- Buttons for Part 2 Song bits  -->
+		<button class="button" onclick="play_frame('/audio/africa/africa9.mp3')">Frame {{ names[8] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa13.mp3')">Frame {{ names[12] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa10.mp3')">Frame {{ names[9] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa11.mp3')">Frame {{ names[10] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa14.mp3')">Frame {{ names[13] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa8.mp3')">Frame {{ names[7] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa12.mp3')">Frame {{ names[11] }}</button>
+		</center>
+	</div>
+
+	<!-- ------------------------------ PART 3 ----------------------------- -->
+	<div class='inner-wrapper'>
+
+		<h3>Part 3</h3>
+		<center>
+		<!-- Buttons for Part 3 Song bits  -->
+		<button class="button" onclick="play_frame('/audio/africa/africa15.mp3')">Frame {{ names[14] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa21.mp3')">Frame {{ names[20] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa16.mp3')">Frame {{ names[15] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa19.mp3')">Frame {{ names[18] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa17.mp3')">Frame {{ names[16] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa20.mp3')">Frame {{ names[19] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa18.mp3')">Frame {{ names[17] }}</button>
+		</center>
+	</div>
+
+	<!-- ------------------------------ PART 4 ----------------------------- -->
+	<div class='inner-wrapper'>
+
+		<h3>Part 4</h3>
+		<center>
+		<!-- Buttons for Part 4 Song bits  -->
+		<button class="button" onclick="play_frame('/audio/africa/africa22.mp3')">Frame {{ names[21] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa28.mp3')">Frame {{ names[27] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa23.mp3')">Frame {{ names[22] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa25.mp3')">Frame {{ names[24] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa26.mp3')">Frame {{ names[25] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa24.mp3')">Frame {{ names[23] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa27.mp3')">Frame {{ names[26] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa29.mp3')">Frame {{ names[28] }}</button>
+		<button class="button" onclick="play_frame('/audio/africa/africa29.mp3')">Frame {{ names[28] }}</button>
+		</center>
+	</div>
+
+</div>
+		<a class="button" href="/logout" onclick="setLoading();" style="margin-left:10px;">Log Out</a>
+
+
+<!--             Do not touch below here                  -->
+
+
+	<script src='/js/music_controls.js'></script>
+
+	<!-- gameCode -->
+
+	{% if in_game == 1 %}
+	<script>setTimeout(() => { initLoop() }, 1000);</script>
+	{%endif%}
+	<script>
+		let oldKey = '{{ old_key }}';
+		let loadInterval;
+		let route = '/song/africa'
+		window.addEventListener("load", ()=>{
+			document.getElementById("loading").style.display = 'none';
+		});
+		function setLoading(){
+			document.getElementById("loading").style.display = 'block';
+		}
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+	<script src="/js/game.js"></script>
+	<script src="/js/msg-box.js"></script>
+	<div class='msg-wrapper' id='msg-wrapper'>
+	  <div class='drag-space' id='drag-space'></div>
+	  <div class='msg-box' id='msg-box' onscroll="adjust()">
+			<div class='msg-node'>
+	      <p>
+	        <span>Server:</span><u>How to play:</u> You will have 10 seconds to submit
+					each frame in the correct order. Running out of time or getting the
+					frame wrong will end the game and you will have to start over.
+					Listen to each frame before submiting them to figure out the order.
+					Enter /ready and the game will start when all your team members are ready.
+					To play alone just pick a team with no members other than yourself.
+					Click on the question mark to the right of the text box below to learn how to use
+					your message box.
+	      </p>
+	    </div>
+	  </div>
+	  <div class='auto-scroll' id='auto-scroll' onclick='scrollBottom()'>view new messages</div>
+	</div>
+
+	<div class="text-box-guide" id="msg-box-help" style="display:none;">
+	  <div>
+<span class="exit-help" onclick="toggleMsgHelp();" style="font-weight:bolder; color:black; cursor:pointer; padding: 0px 5px;">x</span>
+	    <center><h3 style="margin-top:0px;">Text Box Guide</h3></center>
+	    ALL messages you send can be seen by admins.<br/>
+	    Messages in <span style="background:rgb(144, 238, 144);">green</span> were sent from a student to all admins.<br/>
+	    Messages in <span style="background:rgb(97, 175, 239);color:white;">blue</span> were sent by a student to their team.<br/>
+	    Messages in <span style="background:rgb(255, 255, 0);">light-yellow</span> were sent by an admin.<br/>
+	    <br/>
+	    You can use the up and down arrow keys to navigate through your text input history.
+	    <h4>Command List:</h4>
+	    |text| -><br/>
+	    	<span class='indent'>To <b>submit frames</b> simply input them into the</span>
+	      <span class='indent'>text box.</span>
+	    <br/><br/>
+	    /ready -><br/>
+	    	<span class='indent'>Signals that you're <b>ready to start</b> the game.</span>
+	    <br/><br/>
+	    /clear -><br/>
+	    	<span class='indent'><b>Clears</b> your message box.</span>
+	    <br/><br/>
+	{% if admin != 1 %}
+	    /team |message| -><br/>
+	    	<span class='indent'>Sends your <b>message to your team members</b>.</span>
+	    <br/><br/>
+	    /admin |message| -><br/>
+	    	<span class='indent'>Sends your <b>message to admins</b>.</span>
+	    <br/><br/>
+	    /list -><br/>
+	    	<span class='indent'>returns a <b>list of your team members</b> with</span>
+	      <span class='indent'>thier status.</span>
+	    <br/><br/>
+	{% else %}
+	    /team |message| -><br/>
+	    	<span class='indent'>Sends your <b>message to all admins</b> in the</span>
+	      <span class='indent'>room.</span>
+	    <br/><br/>
+	    /all |message| -><br/>
+	    	<span class='indent'>Sends your <b>message to all users</b> in the room.</span>
+	    <br/><br/>
+	    /private |username| |message| -><br/>
+	    	<span class='indent'>Sends your <b>message to a student*</b>.<br/></span>
+	    	<span class='indent'><b>*</b>the message will be visible to all admins</span>
+	    <br/><br/>
+	    /kick |username| -><br/>
+	    	<span class='indent'><b>Kicks</b> out the user.</span>
+	    <br/><br/>
+	    /list -><br/>
+	     	<span class='indent'>Returns a <b>list of all students</b> with their status.</span>
+	    <br/><br/>
+	    /list |teamname| -><br/>
+	    	<span class='indent'>Returns a <b>list of team members</b> with their</span>
+	      <span class='indent'>status.</span>
+	    <br/><br/>
+	{% endif %}
+		</div>
+	</div>
+
+	<!-- user input -->
+	<input id='user-input' placeholder="Enter text here" class='user-input' onkeyup='userInput()' type='text'/>
+	<div class="msg-box-help" onclick="toggleMsgHelp();"><a>?</a></div>
+	<!-- game Code -->
+
+
+</div>
+{% endblock content %}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<html lang="en" dir = "ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Packet Hero!</title>
+    <link rel="stylesheet" href="/css/login_style.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Roboto:ital@1&family=Ubuntu:wght@300&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Manrope&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class='loading' id='loading'><p><img src='/img/loading.gif' alt='loading...'/></p></div>
+
+
+	  <form method="POST" action="" class="login_form">
+      {{ form.hidden_tag() }}
+      <h1> Packet Hero</h1>
+
+      <div class="form-group">
+          {{ form.user(class="form-control form-control-lg", id="user", required="", placeholder="Username") }}
+      </div>
+
+			<div class="form-group">
+          {{ form.team(class="form-control form-control-lg", id="team", required="", placeholder="Team Name (case sensetive)") }}
+			</div>
+
+			<div class="form-group">
+          {{ form.room(class="form-control form-control-lg", id="room", required="", placeholder="Room Number [1 - 16]") }}
+			</div>
+
+      {{ form.submit(class="btn btn-outline-info", value="Login", id="login-submit", style="margin-top: 30px; cursor:pointer;") }}
+
+      {% for field, errors in form.errors.items() %}
+      <div id="form-group" style='color:red; text-align:center;'>
+          {{ form[field].label }}: {{ ', '.join(errors) }}
+      </div>
+      {% endfor %}
+
+    </form>
+
+    <script>
+    window.addEventListener("load", ()=>{
+			document.getElementById("loading").style.display = 'none';
+		});
+		function setLoading(){
+			document.getElementById("loading").style.display = 'block';
+		}
+    document.getElementById('login-submit').addEventListener("click", ()=>{
+      let user = document.getElementById("user").value;
+      let team = document.getElementById("team").value;
+      let room = document.getElementById("room").value;
+      if(user.length > 0 && team.length > 0 && room.length > 0)
+        setLoading();
+		});
+  	// function loading(){
+	  //   let loading = document.getElementById('loading');
+		// 	loadInterval = setInterval(() => {
+		// 		if(document.getElementById('msg-box') != null)
+		// 			closeLoading();
+		// 	}, 1000);
+	  // }
+		// function closeLoading(){
+		// 	clearInterval(loadInterval);
+		// 	let loading = document.getElementById('loading');
+		// 	loading.style.display = 'none';
+		// }
+	  // loading();
+    </script>
+
+  </body>
+</html>

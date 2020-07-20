@@ -1,0 +1,72 @@
+Part 1: GCP
+
+  Step 1:
+    Creating a Project
+      Click -> project drop down menu (3rd button in header)
+      Click -> NEW PROJECT
+      Open the project.
+      Click -> Navigation Menu (1st button in header)
+      Click -> Compute Engine *
+      * Compute Engine set up automatically starts after clicking on it
+      Wait for Compute Engine to finish setting up
+      (To see set up statuses click on 3rd to last button in header)
+
+  Step 2:
+    Creating a New VM Instance
+    Make sure you're still in the project's compute engine
+    Click -> Create Instance
+    Instance Values to Change:
+      Instance ID: packethero
+      Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
+      Boot Disk: Debian GNU/Linux 10 (buster)
+
+  Step 2:
+    Creating your MySQL Database
+    Use the search bar in the header and type: Cloud SQL Admin API
+    Click -> Cloud SQL Admin API
+    Click -> Enable
+
+    Search -> Cloud SQL
+    Click -> Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
+    Click -> GO TO CLOUD SQL
+    Click -> CREATE INSTANCE
+    Click -> Choose MySQL
+    Instance Values to Change:
+      Instance ID: packethero-db
+      Root password: Click on Generate (copy the password somewhere)
+    Click -> Create
+    Wait...
+    (until green check mark appears next to Instance ID)
+
+    Click -> packethero-db
+    Ctrl + f -> Connect using Cloud Shell
+    Open up the terminal (5th to last button in header)
+    Wait...
+    (until terminal loads, try refreshing page if it takes a while)
+
+Part 2:
+  Step 1:
+    Creating Database Tables
+    After your terminal has loaded
+    Type: gcloud sql connect packethero-db --user=root --quiet
+    Make sure your database name matches
+    Hit Enter
+    Wait...
+    Enter Password
+    Copy and Paste the following:
+        CREATE DATABASE packethero;
+        USE packethero;
+        CREATE TABLE gamers (
+          id INT NOT NULL UNIQUE AUTO_INCREMENT PRIMARY KEY,
+          username VARCHAR(200) NOT NULL,
+          teamname VARCHAR(200) NOT NULL,
+          room VARCHAR(200) NOT NULL,
+          admin INT NOT NULL,
+          session VARCHAR(200) NOT NULL,
+          song VARCHAR(200) NOT NULL
+        );
+        QUIT;
+
+Part 3:
+  Step 1:
+    

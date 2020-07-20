@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #9494b8;
+  font-family: 'Manrope', sans-serif;
+  /* background-color: #e9faff; */
+}
+
+.main-frame{
+  width: 550px;
+  background: #fff;
+  height: 500px;
+  padding: 60px 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.title h1{
+  text-align: center;
+  position: relative;
+  bottom: 33px;
+  margin-bottom: -58px;
+  font-size: 250%;
+  font-family: 'Baloo Tamma 2', cursive;
+}
+
+.songs{
+  position: relative;
+  bottom: -12px;
+  left: 10px;
+  padding: 22px 15px;
+  font-size: 18px;
+}
+
+
+.play-button {
+  box-sizing: border-box;
+  display:inline-block;
+  width:35px;
+  height:35px;
+  padding-left: 6px;
+  line-height: 38px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  border-color: rgba(0,0,0,0.8);
+  color:rgba(0,0,0,0.8);
+  text-align:center;
+  text-decoration:none;
+  background-color: white;
+  font-size:11px;
+  font-weight:bold;
+  transition: all 0.3s ease;
+}
+.play-button:hover {
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  border-color: rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 10px;
+  cursor: pointer;
+}
+
+.select_button {
+  background-color: white; /* Green */
+  border: 2px solid #008CBA;
+  color: black;
+  padding: 2px 4px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  font-weight:bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.select_button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.go-to{
+  font-size: 24px;
+  color:#00a3e0;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease;
+}
+
+.go-to:hover{
+  color: black;
+}

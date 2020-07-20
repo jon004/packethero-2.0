@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Song Selection</title>
+  <link rel="stylesheet" href="/css/selection_style.css">
+  <link rel="stylesheet" href="/css/msgbox_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Manrope&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+</head>
+
+<body>
+
+  <!--  loadingSTART  -->
+  <div class='loading' id='loading'><p><img src='/img/loading.gif' alt='loading...'/></p></div>
+  <!--  loadingEND  -->
+
+
+  <div class="main-frame">
+
+    <div class="title">
+      <h1>Select a Song<h1>
+    </div>
+
+    <div class="songs">
+      <audio id="cups" src="/audio/cups/cups.mp3" preload="auto"></audio>
+      <div id='cups-tag' onClick="togglePlay('cups')" style="display:inline-block"><a class="play-button"><i class="fa fa-play fa-2x"></i></a></div>
+
+      <p style="display:inline-block; margin-left:10px; margin-right:164px">'Cups' by Anna Kendrick</p>
+      <a href='/song/cups' onclick="setLoading();" class="go-to"><i class="far fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+    <div class="songs">
+      <audio id="allstar" src="/audio/smash/smash.mp3" preload="auto"></audio>
+      <div id='allstar-tag' onClick="togglePlay('allstar')" style="display:inline-block"><a class="play-button"><i class="fa fa-play fa-2x"></i></a></div>
+
+      <p style="display:inline-block; margin-left:10px; margin-right:155px">'All Star' by Smash Mouth</p>
+      <a href='/song/smash' onclick="setLoading();" class="go-to"><i class="far fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+    <div class="songs">
+      <audio id="journey" src="/audio/journey/journey.mp3" preload="auto"></audio>
+      <div id='journey-tag' onClick="togglePlay('journey')" style="display:inline-block"><a class="play-button"><i class="fa fa-play fa-2x"></i></a></div>
+
+      <p style="display:inline-block; margin-left:10px; margin-right:92px">'Don't Stop Believing' by Journey</p>
+      <a href='/song/journey' onclick="setLoading();" class="go-to"><i class="far fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+    <div class="songs">
+      <audio id="bob" src="/audio/bob/bob.mp3" preload="auto"></audio>
+      <div id='bob-tag' onClick="togglePlay('bob')" style="display:inline-block"><a class="play-button"><i class="fa fa-play fa-2x"></i></a></div>
+
+      <p style="display:inline-block; margin-left:10px; margin-right:54px">'Don't Worry Be Happy' by Bob Marley</p>
+      <a href='/song/bob' onclick="setLoading();" class="go-to"><i class="far fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+    <div class="songs">
+      <audio id="africa" src="/audio/africa/africa.mp3" preload="auto"></audio>
+      <div id='africa-tag' onClick="togglePlay('africa')" style="display:inline-block"><a class="play-button"><i class="fa fa-play fa-2x"></i></a></div>
+
+      <p style="display:inline-block; margin-left:10px; margin-right:248px">'Africa' by Toto</p>
+      <a href='/song/africa' onclick="setLoading();" class="go-to"><i class="far fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+  </div>
+
+<a class="button" href="/logout" onclick="setLoading();" style="margin-left:18px; text-decoration: underline;">Log Out</a>
+
+</body>
+
+<script>
+  function togglePlay(song) {
+    let myAudio = document.getElementById(song);
+    let tagId = song + '-tag';
+    if(!myAudio.paused) {
+      myAudio.pause()
+      document.getElementById(tagId).innerHTML = '<a class="play-button"><i class="fa fa-play fa-2x"></i></a>';
+    }else{
+      myAudio.play();
+      document.getElementById(tagId).innerHTML = '<a class="play-button" style="padding-left: 1px; font-size: 11px;"><i class="fa fa-pause fa-2x"></i></a>';
+    }
+  };
+</script>
+
+<!-- gameCode -->
+
+{% if in_game == 1 %}
+<script>setTimeout(() => { initLoop() }, 1000);</script>
+{%endif%}
+<script>
+  let oldKey = '{{ old_key }}';
+  let route = '/song'
+  let loadInterval;
+  window.addEventListener("load", ()=>{
+    document.getElementById("loading").style.display = 'none';
+  });
+  function setLoading(){
+    document.getElementById("loading").style.display = 'block';
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+<script src="/js/game.js"></script>
+<script src="/js/msg-box.js"></script>
+<div class='msg-wrapper' id='msg-wrapper'>
+  <div class='drag-space' id='drag-space'></div>
+  <div class='msg-box' id='msg-box' onscroll="adjust()">
+  </div>
+  <div class='auto-scroll' id='auto-scroll' onclick='scrollBottom()'>
+    view new messages
+  </div>
+</div>
+
+<div class="text-box-guide" id="msg-box-help" style="display:none;">
+  <div>
+<span class="exit-help" onclick="toggleMsgHelp();" style="font-weight:bolder; color:black; cursor:pointer; padding: 0px 5px;">x</span>
+    <center><h3 style="margin-top:0px;">Text Box Guide</h3></center>
+    ALL messages you send can be seen by admins.<br/>
+    Messages in <span style="background:rgb(144, 238, 144);">green</span> were sent from a student to all admins.<br/>
+    Messages in <span style="background:rgb(97, 175, 239);color:white;">blue</span> were sent by a student to their team.<br/>
+    Messages in <span style="background:rgb(255, 255, 0);">light-yellow</span> were sent by an admin.<br/>
+    <br/>
+    You can use the up and down arrow keys to navigate through your text input history.
+    <h4>Command List:</h4>
+    |text| -><br/>
+    	<span class='indent'>To <b>submit frames</b> simply input them into the</span>
+      <span class='indent'>text box.</span>
+    <br/><br/>
+    /ready -><br/>
+    	<span class='indent'>Signals that you're <b>ready to start</b> the game.</span>
+    <br/><br/>
+    /clear -><br/>
+    	<span class='indent'><b>Clears</b> your message box.</span>
+    <br/><br/>
+{% if admin != 1 %}
+    /team |message| -><br/>
+    	<span class='indent'>Sends your <b>message to your team members</b>.</span>
+    <br/><br/>
+    /admin |message| -><br/>
+    	<span class='indent'>Sends your <b>message to admins</b>.</span>
+    <br/><br/>
+    /list -><br/>
+    	<span class='indent'>returns a <b>list of your team members</b> with</span>
+      <span class='indent'>thier status.</span>
+    <br/><br/>
+{% else %}
+    /team |message| -><br/>
+    	<span class='indent'>Sends your <b>message to all admins</b> in the</span>
+      <span class='indent'>room.</span>
+    <br/><br/>
+    /all |message| -><br/>
+    	<span class='indent'>Sends your <b>message to all users</b> in the room.</span>
+    <br/><br/>
+    /private |username| |message| -><br/>
+    	<span class='indent'>Sends your <b>message to a student*</b>.<br/></span>
+    	<span class='indent'><b>*</b>the message will be visible to all admins</span>
+    <br/><br/>
+    /kick |username| -><br/>
+    	<span class='indent'><b>Kicks</b> out the user.</span>
+    <br/><br/>
+    /list -><br/>
+     	<span class='indent'>Returns a <b>list of all students</b> with their status.</span>
+    <br/><br/>
+    /list |teamname| -><br/>
+    	<span class='indent'>Returns a <b>list of team members</b> with their</span>
+      <span class='indent'>status.</span>
+    <br/><br/>
+{% endif %}
+  </div>
+</div>
+
+<!-- user input -->
+<input id='user-input' placeholder="Enter text here" class='user-input' onkeyup='userInput()' type='text'/>
+<div class="msg-box-help" onclick="toggleMsgHelp();"><a>?</a></div>
+
+<!-- game Code -->
+
+
+</body>
+
+</html>
