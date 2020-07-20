@@ -1,5 +1,4 @@
 Part 1: GCP
-
   Step 1: Creating a Project
       Click -> project drop down menu (3rd button in header)
       Click -> NEW PROJECT
@@ -152,12 +151,12 @@ server {
 
                 proxy_read_timeout 86400s;
 
-                proxy_pass http://0.0.0.0:5000;
+                proxy_pass https://0.0.0.0:5000;
 
         }
 
 }
-      
+
       IMPORTANT: Replace domain-placeholder.com with your domain
       (Example: server_name packethero.baycyber.net;)
 
@@ -175,6 +174,7 @@ Part 6: Final Touch ups
       sudo certbot certonly --nginx
       (alternative: sudo certbot certonly --nginx --register-unsafely-without-email)
       sudo certbot renew --dry-run
+  
   Step 10: How to run your server
     Enter -> sudo python3 packethero-2.0/server.py
 
