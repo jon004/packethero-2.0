@@ -1,7 +1,9 @@
 # packethero-2.0
 
-Part 1: GCP
-  Step 1: Creating a Project
+#Google Cloud Platform Set Up
+
+Step 1: Creating a Project
+
       Click -> project drop down menu (3rd button in header)
       Click -> NEW PROJECT
       Open the project.
@@ -11,30 +13,34 @@ Part 1: GCP
       Wait for Compute Engine to finish setting up
       (To see set up statuses click on 3rd to last button in header)
 
-  Step 2: Creating a New VM Instance
+
+Step 2: Creating a New VM Instance
     Make sure you're still in the project's compute engine
     Click -> Create Instance
     Instance Values to Change:
+    
       Name: packethero
       Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
       Boot Disk: Debian GNU/Linux 10 (buster)
 
-  Step 3: Creating a MySQL Database Instance
+
+Step 3: Creating a MySQL Database Instance
     Use the search bar in the header and type: Cloud SQL Admin API
     Click -> Cloud SQL Admin API
     Click -> Enable
-
     Search -> Cloud SQL
     Click -> Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
     Click -> GO TO CLOUD SQL
     Click -> CREATE INSTANCE
     Click -> Choose MySQL
     Instance Values to Change:
+    
       Instance ID: packethero-db
       Root password: Click on Generate (copy and save the password somewhere you can access later)
-    Click -> Create
-    Wait...
-    (until green check mark appears next to Instance ID)
+
+  Click -> Create
+  Wait...
+  (until green check mark appears next to Instance ID)
 
     Click -> packethero-db
     Ctrl + f -> Connect using Cloud Shell
@@ -42,15 +48,17 @@ Part 1: GCP
     Wait...
     (until terminal loads, try refreshing page if it takes a while)
 
-Part 2: DB Table
-  Step 4: Creating Database Tables
+
+# DB Table
+Step 4: Creating Database Tables
     After your terminal has loaded
     Type: gcloud sql connect packethero-db --user=root --quiet
     Make sure your database name matches
     Hit Enter
     Wait...
     Enter Password
-    Copy and Paste the following:
+    Copy and Paste the following, hit enter, and then close the terminal
+    
         CREATE DATABASE packethero;
         USE packethero;
         CREATE TABLE gamers (
@@ -63,17 +71,17 @@ Part 2: DB Table
           song VARCHAR(200) NOT NULL
         );
         QUIT;
+      
 
-    Close Terminal
-
-Part 3: Packages
-  Step 5: Installing Packages and Downloading Code
+# Packages
+Step 5: Installing Packages and Downloading Code
     Click -> Navigation Menu (1st button in header)
     Click -> Compute Engine
     Click -> SSH
     (Under the connect column of the table that loaded)
     Wait for the terminal to load
     Copy Paste the following:
+
       sudo apt-get -y update
       sudo apt-get -y upgrade
       sudo apt-get -y install python3 python3-pip python3-dev nginx git-all ufw
