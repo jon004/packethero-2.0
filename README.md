@@ -191,7 +191,7 @@ Run the following commands
     sudo service nginx configtest
     sudo service nginx restart
 
-## Final Touch ups (ssl, how to run)##
+## Final Touch ups (ssl, how to run) ##
 **Step 9: SSL Cert**
 Still in the terminal
 Run the following commands
