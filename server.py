@@ -1,5 +1,5 @@
 # Main web app
-# By Tanisha Babic
+# By Tanisha Babic / Jonathan Muniz-Murguia / Darien Cruz
 #-----------------------------------------------------------------------------#
 import functools
 from flask import Flask, render_template, session, request, flash, url_for, redirect
@@ -528,8 +528,6 @@ def ready():
 #-----------------------------------------------------------------------------#
 #-----------------------------------------------------------------------------#
 
-# Run app
-# Uncomment when running locally
 if __name__ == '__main__':
 	socketio.run(app, host='0.0.0.0', port='5000', debug=True)
 
