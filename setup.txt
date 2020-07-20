@@ -67,6 +67,17 @@ Part 2:
         );
         QUIT;
 
+    Close Terminal
+
 Part 3:
   Step 1:
+    Uploading Code
+    Click -> Navigation Menu (1st button in header)
+    Click -> Compute Engine
+    Click -> SSH
+    (Under the connect column of the table that loaded)
+    Wait for the terminal to load
+    Copy Paste the following:
     
+
+tBN5k9m4nynAgGr9
