@@ -133,6 +133,7 @@ Go back to the terminal and edit the following variables in packethero-2.0/app.p
     username, passw
 
 Replace the placeholders with the credentials you created in step 6
+
 Replace the SECRET_KEY placeholder with a random alphanumerical string
 (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
 
@@ -143,50 +144,42 @@ Replace the SECRET_KEY placeholder with a random alphanumerical string
 - Exit the text editor with Ctrl + x
     
 ## Nginx ##
-Step 8: Configuring Nginx
+
+**Step 8: Configuring Nginx**
+
 Enter the following commands
-sudo ufw allow 'Nginx Full'
-sudo mkdir /var/log/nginx/packethero
-    
-Enter -> sudo nano /etc/nginx/sites-available/packethero
-Paste the following and save the file
-server {
 
-listen 80;
-server_name domain-placeholder.com;
+    sudo ufw allow 'Nginx Full'
+    sudo mv /packethero-2.0/packethero /etc/nginx/sites-available/packethero
+    sudo nano /etc/nginx/sites-available/packethero
 
-access_log /var/log/nginx/packethero/access.log;
-error_log /var/log/nginx/packethero/error.log;
+IMPORTANT: Change the domain name to match yours
 
-proxy_connect_timeout       605;
-proxy_send_timeout          605;
-proxy_read_timeout          605;
-send_timeout                605;
-keepalive_timeout           605;
+    server {
+        server_name packethero.baycyber.net; # change domain
+        ...
+        ...
+        
+        location / {
+            ...
+        }
 
+        ...
+        ssl_certificate /etc/letsencrypt/live/packethero.baycyber.net/fullchain.pem; # managed by Certbot | change domain
+        ssl_certificate_key /etc/letsencrypt/live/packethero.baycyber.net/privkey.pem; # managed by Certbot | change domain
+        ...
+    }
 
-location / {
+    server {
+        if ($host = packethero.baycyber.net) { # change domain
+        ...
 
-proxy_http_version 1.1;
+        server_name packethero.baycyber.net; # change domain
+        ...
+    }
 
-proxy_set_header Upgrade $http_upgrade;
-proxy_set_header Connection "upgrade";
-proxy_set_header Host $host;
-proxy_set_header X-Real-Ip $remote_addr;
-proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-proxy_set_header X-Forwarded-Proto $scheme;
-proxy_set_header X-Forwarded-Port $server_port;
-
-proxy_read_timeout 86400s;
-
-proxy_pass http://0.0.0.0:5000;
-
-}
-
-}
-
-IMPORTANT: Replace domain-placeholder.com with your domain
-(Example: server_name packethero.baycyber.net;)
+- Ctrl + s -> saves file
+- Ctrl + x -> exits text editor
 
 Run the following commands
 
