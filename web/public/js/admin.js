@@ -1,4 +1,4 @@
-let socket = io.connect('https://' + document.domain + ':' + location.port);
+let socket = io.connect('http://localhost:3000') //'https://' + document.domain + ':' + location.port);
 let song_to_play = new Audio(document.getElementById('song_name').value);
 let msg_queue = [];
 let admin_flag = document.getElementById('af').value;
@@ -16,7 +16,7 @@ function ready(){
 
 function initLoop(){
   prevTime = -1
-  loop = setInterval(() => { // checks for game updates every second
+  loop = setInterval(() => { // checks for changes every second second
     socket.emit('game-loop');
   }, 1000);
 }
@@ -43,7 +43,6 @@ function displayTime(time){
   prevTime = Math.floor(time);
 }
 
-// on connect get and update game data variables
 socket.on('connect', () => {
   socket.emit('get-users');
   socket.emit('setSID');
@@ -56,7 +55,6 @@ function kickUser(){
   }
 }
 
-// returns HTML/CSS formatted option element
 function createOption(text, value){
   let option_node = document.createElement('option');
   let text_node = document.createTextNode(text);
@@ -81,9 +79,6 @@ function isOption(user){
   }
   return false;
 }
-
-///////////////////////////////////////////////////////////////////////////////
-// Socket Events
 
 socket.on('addUser', (user) => {
   if(!isOption(user) && user.admin !== 1)

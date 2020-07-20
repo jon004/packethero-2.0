@@ -1,4 +1,4 @@
-let socket = io.connect('https://' + document.domain + ':' + location.port) //'http://' + document.domain + ':' + location.port);
+let socket = io.connect('https://' + document.domain + ':' + location.port) //'https://' + document.domain + ':' + location.port);
 let msg_queue = [];
 let user_data;
 
@@ -31,8 +31,13 @@ function displayTime(time){
   prevTime = Math.floor(time);
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// Socket events
+//socket.on('ping-user', () => {
+//  socket.emit('pong-server');
+//});
+
+//socket.on('ping-game', () => {
+//  socket.emit('pong-server');
+//});
 
 socket.on('redirect', (url) => {
   window.location = url;
