@@ -1,4 +1,4 @@
-let socket = io.connect('http://' + document.domain + ':' + location.port) //'https://' + document.domain + ':' + location.port);
+let socket = io.connect('https://' + document.domain + ':' + location.port) //'http://' + document.domain + ':' + location.port);
 let msg_queue = [];
 let user_data;
 
