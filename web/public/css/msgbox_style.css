@@ -147,7 +147,7 @@
   overflow-y:scroll;
   background-color:#ffffff;
   border-bottom:0.5px solid gray;
-border-radius:0px 0px 0px 3px;
+border-radius:0px 0px 0px 3px;  
 box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -166,7 +166,7 @@ box-shadow:
 .msg-box-help{
   display: block;
   box-sizing: border-box;
-  height: 31px;
+  height: 30px;
   width: 50px;
   text-align: center;
   background: rgba(0,0,0,0.55);
