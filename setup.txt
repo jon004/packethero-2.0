@@ -116,5 +116,5 @@ Part 4:
 
     Go back to GCP (still in SQL page)
     Click -> Overview
-    Copy the Connection Name
+    Copy -> Public IP address 
     Replace the Host variable's placeholder with this Connection Name and save the file
