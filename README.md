@@ -30,19 +30,20 @@ Instance Values to Change:
     Boot Disk: Debian GNU/Linux 10 (buster)
 
 
-Step 3: Creating a MySQL Database Instance
+**Step 3: Creating a MySQL Database Instance**
 Use the search bar in the header and type: Cloud SQL Admin API
-Click -> Cloud SQL Admin API
-Click -> Enable
-Search -> Cloud SQL
-Click -> Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
-Click -> GO TO CLOUD SQL
-Click -> CREATE INSTANCE
-Click -> Choose MySQL
+- Click -> Cloud SQL Admin API
+- Click -> Enable
+- Search -> Cloud SQL
+- Click -> Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
+- Click -> GO TO CLOUD SQL
+- Click -> CREATE INSTANCE
+- Click -> Choose MySQL
+
 Instance Values to Change:
     
-Instance ID: packethero-db
-Root password: Click on Generate (copy and save the password somewhere you can access later)
+    Instance ID: packethero-db
+    Root password: Click on Generate (copy and save the password somewhere you can access later)
 
 Click -> Create
 Wait...
