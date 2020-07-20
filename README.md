@@ -17,6 +17,7 @@ Wait for Compute Engine to finish setting up
 (To see set up statuses click on 3rd to last button in header)
 
 
+
 **Step 2: Creating a New VM Instance**
 
 Make sure you're still in the project's compute engine
