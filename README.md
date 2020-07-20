@@ -31,7 +31,8 @@ Instance Values to Change:
 
 
 **Step 3: Creating a MySQL Database Instance**
-Use the search bar in the header and type: Cloud SQL Admin API
+
+Enable SQL Admin API and create a DB Instance
 - Click -> Cloud SQL Admin API
 - Click -> Enable
 - Search -> Cloud SQL
@@ -41,16 +42,15 @@ Use the search bar in the header and type: Cloud SQL Admin API
 - Click -> Choose MySQL
 
 Instance Values to Change:
-    
+
     Instance ID: packethero-db
     Root password: Click on Generate (copy and save the password somewhere you can access later)
 
-Click -> Create
-Wait...
-(until green check mark appears next to Instance ID)
+- Click -> Create
+- Wait... (until green check mark appears next to Instance ID)
+- Click -> packethero-db
+- Ctrl + f -> Connect using Cloud Shell
 
-Click -> packethero-db
-Ctrl + f -> Connect using Cloud Shell
 Open up the terminal (5th to last button in header)
 Wait...
 (until terminal loads, try refreshing page if it takes a while)
