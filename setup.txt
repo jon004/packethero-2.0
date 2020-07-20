@@ -117,4 +117,30 @@ Part 4:
     Go back to GCP (still in SQL page)
     Click -> Overview
     Copy -> Public IP address 
-    Replace the Host variable's placeholder with this Connection Name and save the file
+    Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
+    Exit the text editor with Ctrl + x
+    
+Part 5:
+  Step 8:
+    Configuring Nginx
+    Enter the following commands
+      ufw delete allow 5000
+      ufw allow 'Nginx Full'
+    Note: Getting "Could not delete non-existent rule" after running these commands is okay
+    
+    Enter -> sudo nano /etc/nginx/sites-available/packethero
+    Paste the following and save the file
+      server {
+        listen 80;
+        server_name domain_placeholder;
+        location / {
+          proxy_pass http://localhost:5000;
+          proxy_set_header Host $host;
+          proxy_set_header X-Real-Ip $remote_addr;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header X-Forwarded-Proto $scheme;
+        }
+      }
+      
+      IMPORTANT: Replace domain_placeholder with your domain
+      (server_name packethero.baycyber.net;)
