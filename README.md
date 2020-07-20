@@ -1,15 +1,15 @@
 # packethero-2.0
 
-#Google Cloud Platform Set Up
+##Google Cloud Platform Set Up
 
-Step 1: Creating a Project
+**Step 1: Creating a Project**
 
 Click -> project drop down menu (3rd button in header)
 Click -> NEW PROJECT
 Open the project.
 Click -> Navigation Menu (1st button in header)
 Click -> Compute Engine *
-* Compute Engine set up automatically starts after clicking on it
+> note: Compute Engine set up automatically starts after clicking on it
 Wait for Compute Engine to finish setting up
 (To see set up statuses click on 3rd to last button in header)
 
