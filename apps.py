@@ -10,17 +10,18 @@ from random import randint
 import time
 
 # DB Variables
-username = 'doadmin_legacy'
-passw = 'zx4cljk7bdab45po'
-host = 'packethero-db-do-user-6468732-0.a.db.ondigitalocean.com'
+username = 'placeholder'
+passw = 'placeholder'
+host = 'placeholder'
 database = 'packethero'
-port = '25060'
-SECRET_KEY='A942AF74DD7FFA84FB96973515BEE'
+#port = '25060'
+SECRET_KEY='placeholder'
 
 app = Flask(__name__, static_url_path='/', static_folder='web/public', template_folder='web/templates')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI']= f'mysql+pymysql://{username}:{passw}@{host}:{port}/{database}'
+app.config['SQLALCHEMY_DATABASE_URI']= f'mysql+pymysql://{username}:{passw}@{host}/{database}'
+# if you specify a port use this instead -> f'mysql+pymysql://{username}:{passw}@{host}:{port}/{database}'
 db = SQLAlchemy(app)
 
 socketio = SocketIO(app, cors_allowed_origins='*')
