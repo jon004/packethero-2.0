@@ -103,6 +103,8 @@ Part 4:
     Go back to the terminal and edit the following variables
     username, passw
     Replace the placeholders with the credentials you are about to create in GCP
+    Replace the SECRET_KEY placeholder with a random alphanumerical string
+    (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
     Ctrl + S -> This command saves the changes
     Go back to GCP
     Click -> CREATE
