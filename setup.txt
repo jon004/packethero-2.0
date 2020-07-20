@@ -102,19 +102,19 @@ Part 4:
       Password: Make one
       Host name: select -> Allow any host (%)
     Click -> CREATE
-    
+    Click -> Connections -> + Add Network
+    Add the IP of the VM you created in Step 2 and click save
+   
+   Step 7:
+    Configuring Code
     Go back to the terminal and edit the following variables
     username, passw
     Replace their placeholders with the credentials you just created in GCP
     Replace the SECRET_KEY placeholder with a random alphanumerical string
     (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
     Ctrl + S -> This command saves the changes
-    
-    Now we will find the values for the Host and Port variables
-    Go back to GCP
-    
 
-tBN5k9m4nynAgGr9
-
-jon
-!q@w#e$r%t
+    Go back to GCP (still in SQL page)
+    Click -> Overview
+    Copy the Connection Name
+    Replace the Host variable's placeholder with this Connection Name and save the file
