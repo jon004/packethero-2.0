@@ -1,6 +1,6 @@
 # packethero-2.0
 
-##Google Cloud Platform Set Up
+## Google Cloud Platform Set Up ##
 
 **Step 1: Creating a Project**
 
