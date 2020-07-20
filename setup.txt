@@ -149,3 +149,8 @@ Part 5:
         sudo ln -s /etc/nginx/sites-available/packethero /etc/nginx/sites-enabled/packethero
         sudo service nginx configtest
         sudo service nginx restart
+
+Part 6:
+  Step 9:
+  How to run your server
+  Enter -> sudo python3 packethero-2.0/server.py
