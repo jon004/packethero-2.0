@@ -58,6 +58,7 @@ Wait...
 
 
 ## DB Table ##
+
 **Step 4: Creating Database Tables**
 
 After your terminal has loaded
@@ -85,12 +86,15 @@ Copy and Paste the following, hit enter, and then close the terminal
 
 ## Packages ##
 **Step 5: Installing Packages and Downloading Code**
+
+Connect to the VM Instance through ssh
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine
 - Click -> SSH (Under the connect column of the table that loaded)
 - Wait for the terminal to load
 
-Copy Paste the following:
+Install the following packages
+Run these commands:
 
     sudo apt-get -y update
     sudo apt-get -y upgrade
@@ -99,7 +103,8 @@ Copy Paste the following:
     sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
 ## DB Connection ##
-Step 6: Configuring Database User Creds
+**Step 6: Configuring Database User Creds**
+
 You will continue working in the terminal you opened in Part 3
 Enter -> nano packethero-2.0/apps.py
 You'll be editing this file later
@@ -118,19 +123,22 @@ Click -> CREATE
 Click -> Connections -> + Add Network
 Add the IP of the VM you created in Step 2 and click save
    
-Step 7: Configuring Code Variables
-Go back to the terminal and edit the following variables
-username, passw
+**Step 7: Configuring Code Variables**
+
+Go back to the terminal and edit the following variables in packethero-2.0/app.py
+    
+    username, passw
+
 Replace their placeholders with the credentials you just created in GCP
 Replace the SECRET_KEY placeholder with a random alphanumerical string
 (ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
-Ctrl + S -> This command saves the changes
+- Ctrl + S -> This command saves the changes
 
-Go back to GCP (still in SQL page)
-Click -> Overview
-Copy -> Public IP address 
-Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
-Exit the text editor with Ctrl + x
+Go back to GCP (SQL page) and whitelist your website's IP to give it access to the database
+- Click -> Overview
+- Copy -> Public IP address 
+- Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
+- Exit the text editor with Ctrl + x
     
 ## Nginx ##
 Step 8: Configuring Nginx
