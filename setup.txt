@@ -1,7 +1,6 @@
 Part 1: GCP
 
-  Step 1:
-    Creating a Project
+  Step 1: Creating a Project
       Click -> project drop down menu (3rd button in header)
       Click -> NEW PROJECT
       Open the project.
@@ -11,8 +10,7 @@ Part 1: GCP
       Wait for Compute Engine to finish setting up
       (To see set up statuses click on 3rd to last button in header)
 
-  Step 2:
-    Creating a New VM Instance
+  Step 2: Creating a New VM Instance
     Make sure you're still in the project's compute engine
     Click -> Create Instance
     Instance Values to Change:
@@ -20,8 +18,7 @@ Part 1: GCP
       Firewall: Check -> "Allow HTTP traffic" and "Allow HTTPS traffic"
       Boot Disk: Debian GNU/Linux 10 (buster)
 
-  Step 3:
-    Creating your MySQL Database
+  Step 3: Creating a MySQL Database Instance
     Use the search bar in the header and type: Cloud SQL Admin API
     Click -> Cloud SQL Admin API
     Click -> Enable
@@ -44,9 +41,8 @@ Part 1: GCP
     Wait...
     (until terminal loads, try refreshing page if it takes a while)
 
-Part 2:
-  Step 4:
-    Creating Database Tables
+Part 2: DB Table
+  Step 4: Creating Database Tables
     After your terminal has loaded
     Type: gcloud sql connect packethero-db --user=root --quiet
     Make sure your database name matches
@@ -69,9 +65,8 @@ Part 2:
 
     Close Terminal
 
-Part 3:
-  Step 5:
-    Uploading Code
+Part 3: Packages
+  Step 5: Installing Packages and Downloading Code
     Click -> Navigation Menu (1st button in header)
     Click -> Compute Engine
     Click -> SSH
@@ -84,9 +79,8 @@ Part 3:
       git clone https://github.com/yonJM1267/packethero-2.0.git
       sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
-Part 4:
-  Step 6:
-    Configuring Database
+Part 4: DB Connection
+  Step 6: Configuring Database User Creds
     You will continue working in the terminal you opened in Part 3
     Enter -> nano packethero-2.0/apps.py
     You'll be editing this file later
@@ -105,8 +99,7 @@ Part 4:
     Click -> Connections -> + Add Network
     Add the IP of the VM you created in Step 2 and click save
    
-   Step 7:
-    Configuring Code
+   Step 7: Configuring Code Variables
     Go back to the terminal and edit the following variables
     username, passw
     Replace their placeholders with the credentials you just created in GCP
@@ -120,9 +113,8 @@ Part 4:
     Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
     Exit the text editor with Ctrl + x
     
-Part 5:
-  Step 8:
-    Configuring Nginx
+Part 5: Nginx
+  Step 8: Configuring Nginx
     Enter the following commands
     sudo ufw delete allow 5000
     sudo ufw allow 'Nginx Full'
@@ -134,7 +126,7 @@ Part 5:
 server {
 
         listen 80;
-        server_name packethero.baycyber.net;
+        server_name domain-placeholder.com;
 
         access_log /var/log/nginx/packethero/access.log;
         error_log /var/log/nginx/packethero/error.log;
@@ -166,7 +158,7 @@ server {
 
 }
       
-      IMPORTANT: Replace domain_placeholder with your domain
+      IMPORTANT: Replace domain-placeholder.com with your domain
       (Example: server_name packethero.baycyber.net;)
 
       Enter the following commands
@@ -174,7 +166,20 @@ server {
         sudo service nginx configtest
         sudo service nginx restart
 
-Part 6:
-  Step 9:
-  How to run your server
-  Enter -> sudo python3 packethero-2.0/server.py
+Part 6: Final Touch ups
+  Step 9: SSL Cert
+    Still in the terminal
+    Run the following commands
+      sudo apt-get -y install certbot python-certbot-nginx
+      sudo certbot --nginx
+      sudo certbot certonly --nginx
+      (alternative: sudo certbot certonly --nginx --register-unsafely-without-email)
+      sudo certbot renew --dry-run
+  Step 10: How to run your server
+    Enter -> sudo python3 packethero-2.0/server.py
+
+Usefull Links:
+  SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
+  Nginx: 
+  SQLAlchemy:
+  
