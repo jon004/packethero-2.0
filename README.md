@@ -141,6 +141,7 @@ Go back to the terminal go into packethero-2.0/apps.py to edit some variables
 Replace the placeholders for `username` and `passw` with the credentials you created in step 6
 
 Replace the `SECRET_KEY` placeholder with a random alphanumerical string
+
 (ex: `SECRET_KEY='A942AF74DD7FFA84FB96973515BEE'`)
 
 Replace the placeholder for `host` with your DB's IP, save the file and exit the editor
