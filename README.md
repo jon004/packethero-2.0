@@ -31,6 +31,8 @@ Instance Values to Change:
     Boot Disk: Debian GNU/Linux 10 (buster)
 
 
+## DB Table ##
+
 **Step 3: Creating a MySQL Database Instance**
 
 Enable SQL Admin API and create a DB Instance
@@ -54,8 +56,6 @@ Instance Values to Change:
 - Open up the terminal (5th to last button in header)
 - Wait... (until terminal loads, try refreshing page if it takes a while)
 
-
-## DB Table ##
 
 **Step 4: Creating Database Tables**
 
