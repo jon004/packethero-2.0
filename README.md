@@ -1,6 +1,8 @@
 # packethero-2.0
 
-## Google Cloud Platform Set Up ##
+# Google Cloud Platform Set Up
+
+## VM ##
 
 **Step 1: GCP Project Set Up**
 
