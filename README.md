@@ -158,7 +158,7 @@ Replace the placeholder for `host` with your DB's IP, save the file and exit the
 Enter the following commands
 
     sudo ufw allow 'Nginx Full'
-    sudo mv /packethero-2.0/packethero /etc/nginx/sites-available/packethero
+    sudo mv packethero-2.0/packethero /etc/nginx/sites-available/packethero
     sudo nano /etc/nginx/sites-available/packethero
 
 IMPORTANT: Change the domain name to match yours
