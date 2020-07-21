@@ -168,24 +168,6 @@ Example:
     server {
         server_name packethero.baycyber.net; # change domain
         ...
-        ...
-        
-        location / {
-            ...
-        }
-
-        ...
-        ssl_certificate /etc/letsencrypt/live/packethero.baycyber.net/fullchain.pem; # managed by Certbot | change domain
-        ssl_certificate_key /etc/letsencrypt/live/packethero.baycyber.net/privkey.pem; # managed by Certbot | change domain
-        ...
-    }
-
-    server {
-        if ($host = packethero.baycyber.net) { # change domain
-        ...
-
-        server_name packethero.baycyber.net; # change domain
-        ...
     }
 
 - Ctrl + s -> saves file
