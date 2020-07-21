@@ -113,7 +113,6 @@ You will continue working in the terminal you opened in Part 3
 Enter -> nano packethero-2.0/apps.py
 You'll be editing this file later
 
-
 Leave this window open and go back to GCP and create a user account for your database
 - Click -> Navigation Menu (1st button in header)
 - Click -> SQL
@@ -128,14 +127,16 @@ Variables to Change:
     Host name: select -> Allow any host (%)
 
 Now whitelist your website's IP to give it access to the database
+
 - Click -> CREATE
 - Click -> Connections -> + Add Network
 - Add the IP of the VM you created in Step 2 and click save
    
 **Step 7: Configuring Code Variables**
 
-Go back to the terminal and edit the following variables in packethero-2.0/app.py
-    
+Go back to the terminal and edit the following variables in packethero-2.0/apps.py *
+> *Note: command -> nano packethero-2.0/apps.py
+
     username, passw
 
 Replace the placeholders with the credentials you created in step 6
