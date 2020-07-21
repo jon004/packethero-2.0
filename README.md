@@ -2,7 +2,7 @@
 
 # Google Cloud Platform Set Up
 
-## VM ##
+## VM Setup ##
 
 **Step 1: GCP Project Set Up**
 
