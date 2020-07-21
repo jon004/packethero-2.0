@@ -134,20 +134,20 @@ Now whitelist your website's IP to give it access to the database
    
 **Step 7: Configuring Code Variables**
 
-Go back to the terminal and edit the following variables in packethero-2.0/apps.py *
-> *Note: command -> nano packethero-2.0/apps.py
+Go back to the terminal go into packethero-2.0/apps.py to edit some variables
 
-    username, passw
+    nano packethero-2.0/apps.py
 
-Replace the placeholders with the credentials you created in step 6
+Replace the placeholders for `username` and `passw` with the credentials you created in step 6
 
-Replace the SECRET_KEY placeholder with a random alphanumerical string
-(ex: SECRET_KEY='A942AF74DD7FFA84FB96973515BEE')
+Replace the `SECRET_KEY` placeholder with a random alphanumerical string
+(ex: `SECRET_KEY='A942AF74DD7FFA84FB96973515BEE'`)
 
+Replace the placeholder for `host` with your DB's IP, save the file and exit the editor
+
+- Click (back on GCP) -> Overview
+- Copy -> Public IP address of your database
 - Ctrl + S -> This command saves the changes
-- Click -> Overview
-- Copy -> Public IP address 
-- Replace the Host variable's placeholder with this Connection Name and save the file (ctrl + s)
 - Exit the text editor with Ctrl + x
     
 ## Nginx ##
