@@ -188,10 +188,11 @@ Run the following commands
 
     sudo apt-get -y install certbot python-certbot-nginx
     sudo certbot --nginx
-    sudo certbot certonly --nginx
-    (alternative: sudo certbot certonly --nginx --register-unsafely-without-email)
-    sudo certbot renew --dry-run
-  
+    or
+    sudo certbot --nginx --register-unsafely-without-email
+
+> Note: pick `Redirect` when prompted
+
 **Step 10: How to run your server**
 Enter -> sudo python3 packethero-2.0/server.py
 
