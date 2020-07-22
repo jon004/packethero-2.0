@@ -1,4 +1,4 @@
-let socket = io.connect('http://localhost:3000') //'https://' + document.domain + ':' + location.port);
+let socket = io.connect('https://localhost:3000') //'https://' + document.domain + ':' + location.port);
 let song_to_play = new Audio(document.getElementById('song_name').value);
 let msg_queue = [];
 let admin_flag = document.getElementById('af').value;
