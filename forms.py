@@ -1,5 +1,4 @@
 # Team sign up form with valid input checkers
-# By Tanisha Babic
 #-----------------------------------------------------------------------------#
 from flask import current_app
 from flask_wtf import FlaskForm
