@@ -99,7 +99,7 @@ Connect to the VM Instance through ssh:
 - Click -> SSH (Under the connect column of the table that loaded)
 - Wait for the terminal to load
 
-Install the following packages, make sure you are in `~/`
+Install the following packages, make sure you are in `~/` throught the set up from this point on
 
 Running `cd ~/` gets you here if you're not already there
 
