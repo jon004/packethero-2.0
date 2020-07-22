@@ -204,11 +204,9 @@ Do once
     sudo chmod +x packethero-2.0/run.sh
     sudo mv packethero-2.0/run.sh run.sh
 
-After this you can start the server by running
+After this you can start the server by running `./run.sh` on boot
 
-    ./run.sh
-
-on boot
+You should now be able to access the website
 
 # Helpfull Links:
 
