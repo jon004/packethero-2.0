@@ -1,4 +1,5 @@
 server {
+    listen 80;
     server_name packethero.baycyber.net; # change domain
     
     access_log /var/log/nginx/packethero/access.log;
@@ -16,7 +17,7 @@ server {
 	proxy_set_header X-Real-Ip $remote_addr;
 	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	proxy_set_header X-Forwarded-Proto $scheme;
-	proxy_set_header X-Forwarded-Port $server_port; # maybe not important
+	proxy_set_header X-Forwarded-Port $server_port;
 
 	proxy_http_version 1.1;
 	proxy_set_header Upgrade $http_upgrade;
