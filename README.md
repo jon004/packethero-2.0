@@ -97,7 +97,8 @@ Connect to the VM Instance through ssh
 - Click -> SSH (Under the connect column of the table that loaded)
 - Wait for the terminal to load
 
-Install the following packages, make sure you are in `~/`
+Install the following packages, make sure you are in `~/`, running `cd ~/` gets you here if you're not already there
+
 Run these commands:
 
     sudo apt-get -y update
@@ -186,7 +187,7 @@ Run the following commands
 You will have connection errors without and SSL Cert 
 It's important to do this step before accessing the website
 Still in the terminal
-Run the following commands
+Run the following commands:
 
     sudo apt-get -y install certbot python-certbot-nginx
     sudo certbot --nginx
@@ -199,7 +200,7 @@ Pick `Redirect` when prompted
 
 **Step 10: How to run your server**
 
-Do once
+Do once:
     
     sudo chmod +x ~/packethero-2.0/run.sh
     sudo mv ~/packethero-2.0/run.sh ~/run.sh
