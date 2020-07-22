@@ -1,6 +1,16 @@
 # packethero-2.0
 by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
+# Description
+
+...
+
+# How to play
+
+...
+
+------------------------------
+
 # Google Cloud Platform Set Up
 
 ## VM Setup ##
