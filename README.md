@@ -1,5 +1,5 @@
 # packethero-2.0
-by Tanisha Babbic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
+by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 # Google Cloud Platform Set Up
 
