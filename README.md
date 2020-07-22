@@ -97,7 +97,7 @@ Connect to the VM Instance through ssh
 - Click -> SSH (Under the connect column of the table that loaded)
 - Wait for the terminal to load
 
-Install the following packages
+Install the following packages, make sure you are in `~/`
 Run these commands:
 
     sudo apt-get -y update
@@ -110,7 +110,7 @@ Run these commands:
 **Step 6: Configuring Database User Creds**
 
 You will continue working in the terminal you opened in Part 3
-Enter -> nano packethero-2.0/apps.py
+Enter -> nano ~/packethero-2.0/apps.py
 You'll be editing this file later
 
 Leave this window open and go back to GCP and create a user account for your database
@@ -134,9 +134,9 @@ Now whitelist your website's IP to give it access to the database
    
 **Step 7: Configuring Code Variables**
 
-Go back to the terminal go into packethero-2.0/apps.py to edit some variables
+Go back to the terminal go into `~/packethero-2.0/apps.py` to edit some variables
 
-    nano packethero-2.0/apps.py
+    nano ~/packethero-2.0/apps.py
 
 Replace the placeholders for `username` and `passw` with the credentials you created in step 6
 
@@ -159,7 +159,7 @@ Enter the following commands
 
     sudo ufw allow 'Nginx Full'
     sudo mkdir /var/log/nginx/packethero
-    sudo mv packethero-2.0/packethero /etc/nginx/sites-available/packethero
+    sudo mv ~/packethero-2.0/packethero /etc/nginx/sites-available/packethero
     sudo nano /etc/nginx/sites-available/packethero
 
 IMPORTANT: Change the domain name to match yours
@@ -201,10 +201,10 @@ Pick `Redirect` when prompted
 
 Do once
     
-    sudo chmod +x packethero-2.0/run.sh
-    sudo mv packethero-2.0/run.sh run.sh
+    sudo chmod +x ~/packethero-2.0/run.sh
+    sudo mv ~/packethero-2.0/run.sh ~/run.sh
 
-After this you can start the server by running `./run.sh` on boot
+After this you can start the server by running `./run.sh` when you are on `~/`
 
 You should now be able to access the website
 
