@@ -115,9 +115,7 @@ Run these commands:
 
 You will continue working in the terminal you opened in **Step 5**
 
-Enter -> nano ~/packethero-2.0/apps.py
-
-You'll be editing this file later
+Enter `nano ~/packethero-2.0/apps.py` to open the text editor
 
 Leave this window open and go back to GCP and create a user account for your database
 - Click -> Navigation Menu (1st button in header)
