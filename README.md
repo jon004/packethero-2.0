@@ -201,8 +201,11 @@ Run the following commands
 **Step 9: SSL Cert**
 
 You will have connection errors without and SSL Cert 
+
 It's important to do this step before accessing the website
+
 Still in the terminal
+
 Run the following commands:
 
     sudo apt-get -y install certbot python-certbot-nginx
