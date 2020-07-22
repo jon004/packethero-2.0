@@ -11,16 +11,15 @@ by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 ------------------------------
 
-# Helpfull Links
+# Google Cloud Platform Set Up
+
+## Helpfull Links ##
 
 SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
 
 Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
 
-SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
-  
-
-# Google Cloud Platform Set Up
+SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-forma
 
 ## VM Setup ##
 
