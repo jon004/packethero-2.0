@@ -181,8 +181,10 @@ Run the following commands
     sudo service nginx configtest
     sudo service nginx restart
 
-## Final Touch ups (ssl, how to run) ##
+## SSL Cert ##
 **Step 9: SSL Cert**
+You will have connection errors without and SSL Cert 
+It's important to do this step before accessing the website
 Still in the terminal
 Run the following commands
 
@@ -191,13 +193,16 @@ Run the following commands
     or
     sudo certbot --nginx --register-unsafely-without-email
 
-> Note: pick `Redirect` when prompted
+Pick `Redirect` when prompted
+
+## Running your Website ##
 
 **Step 10: How to run your server**
-Enter -> sudo python3 packethero-2.0/server.py
+    
+    sudo python3 packethero-2.0/server.py
 
 # Helpfull Links:
   SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
-  Nginx:
-  SQLAlchemy:
+  Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
+  SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
   
