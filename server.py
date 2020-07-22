@@ -1,5 +1,4 @@
-# Main web app
-# By Tanisha Babic
+# Main web app API
 #-----------------------------------------------------------------------------#
 import functools
 from flask import Flask, render_template, session, request, flash, url_for, redirect
