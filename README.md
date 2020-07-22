@@ -91,13 +91,16 @@ Copy and Paste the following, hit enter, and then close the terminal
 ## Packages ##
 **Step 5: Installing Packages and Downloading Code**
 
-Connect to the VM Instance through ssh
+Connect to the VM Instance through ssh:
+
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine
 - Click -> SSH (Under the connect column of the table that loaded)
 - Wait for the terminal to load
 
-Install the following packages, make sure you are in `~/`, running `cd ~/` gets you here if you're not already there
+Install the following packages, make sure you are in `~/`
+
+Running `cd ~/` gets you here if you're not already there
 
 Run these commands:
 
@@ -110,8 +113,10 @@ Run these commands:
 ## DB Connection ##
 **Step 6: Configuring Database User Creds**
 
-You will continue working in the terminal you opened in Part 3
+You will continue working in the terminal you opened in **Step 5**
+
 Enter -> nano ~/packethero-2.0/apps.py
+
 You'll be editing this file later
 
 Leave this window open and go back to GCP and create a user account for your database
