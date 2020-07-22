@@ -202,7 +202,10 @@ Pick `Redirect` when prompted
     sudo python3 packethero-2.0/server.py
 
 # Helpfull Links:
-  SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
-  Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
-  SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
+
+SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
+
+Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
+
+SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
   
