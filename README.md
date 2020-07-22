@@ -105,7 +105,6 @@ Copy and Paste the following, hit enter, and then close the terminal
 **Step 5: Installing Packages and Downloading Code**
 
 Connect to the VM Instance through ssh:
-
 - Click -> Navigation Menu (1st button in header)
 - Click -> Compute Engine
 - Click -> SSH (Under the connect column of the table that loaded)
@@ -124,6 +123,7 @@ Run these commands:
     sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
 ## DB Connection ##
+
 **Step 6: Configuring Database User Creds**
 
 You will continue working in the terminal you opened in **Step 5**
@@ -144,7 +144,6 @@ Variables to Change:
     Host name: select -> Allow any host (%)
 
 Now whitelist your website's IP to give it access to the database
-
 - Click -> CREATE
 - Click -> Connections -> + Add Network
 - Add the IP of the VM you created in Step 2 and click save
@@ -162,7 +161,6 @@ Replace the `SECRET_KEY` placeholder with a random alphanumerical string
 (ex: `SECRET_KEY='A942AF74DD7FFA84FB96973515BEE'`)
 
 Replace the placeholder for `host` with your DB's IP, save the file and exit the editor
-
 - Click (back on GCP) -> Overview
 - Copy -> Public IP address of your database
 - Ctrl + S -> This command saves the changes
@@ -199,7 +197,9 @@ Run the following commands
     sudo service nginx restart
 
 ## SSL Cert ##
+
 **Step 9: SSL Cert**
+
 You will have connection errors without and SSL Cert 
 It's important to do this step before accessing the website
 Still in the terminal
