@@ -198,8 +198,17 @@ Pick `Redirect` when prompted
 ## Running your Website ##
 
 **Step 10: How to run your server**
+
+Do once
     
-    sudo python3 packethero-2.0/server.py
+    sudo chmod +x packethero-2.0/run.sh
+    sudo mv packethero-2.0/run.sh run.sh
+
+After this you can start the server by running
+
+    ./run.sh
+
+on boot
 
 # Helpfull Links:
 
