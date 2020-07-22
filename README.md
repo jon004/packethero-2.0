@@ -11,6 +11,15 @@ by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 ------------------------------
 
+# Helpfull Links
+
+SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
+
+Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
+
+SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
+  
+
 # Google Cloud Platform Set Up
 
 ## VM Setup ##
@@ -227,12 +236,3 @@ Do once:
 After this you can start the server by running `./run.sh` when you are on `~/`
 
 You should now be able to access the website
-
-# Helpfull Links:
-
-SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
-
-Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
-
-SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-format
-  
