@@ -15,7 +15,9 @@ by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 ## VM Setup ##
 
-**Step 1: GCP Project Set Up**
+**Step 1: GCP Project Set Up Instructions**
+
+Make sure you have credits on GCP
 
 Create project
 - Click -> project drop down menu (3rd button in header)
