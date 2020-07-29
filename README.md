@@ -18,13 +18,20 @@ controls, login and click on the `?`.
 # Admin Instructions
 
 To login as admin you must input an admin token in the teamname field. 
+
 To get your admin tokens goto the file `server.py` line `24`.
+
 The default list of admin tokens should look like this 
-`adminTokens = ['20foUWSN', '9AhXLJJB', 'kXsMmuID', 'iipcCtCw', 'BDqprSyj']`.
+
+- `adminTokens = ['20foUWSN', '9AhXLJJB', 'kXsMmuID', 'iipcCtCw', 'BDqprSyj']`.
+
 CHANGE THESE VALUES BEFORE RUNNING THE SERVER SINCE THESE TOKENS ARE PUBLIC
+
 You're able to add, remove, or modify this array of tokens without breaking the code.
+
 IF the code does break after modifing these values, the following link can help you fix it
-https://www.w3schools.com/python/python_arrays.asp
+
+- https://www.w3schools.com/python/python_arrays.asp
 
 ------------------------------
 
@@ -249,6 +256,8 @@ Do once:
     sudo chmod +x ~/packethero-2.0/run.sh
     sudo mv ~/packethero-2.0/run.sh ~/run.sh
 
-After this you can start the server by running `./run.sh` when you are on `~/`
+Next, goto the top of this document and read the Admin Instructions section to learn how get your admin tokens.
+
+After you modify the admin token array, you can start the server by running `./run.sh` when you are on `~/`
 
 You should now be able to access the website
