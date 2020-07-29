@@ -5,7 +5,7 @@ by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 # Description
 
-In this the player must put together a song that is broken into 10 second clips.
+In this game the player must put together a song that is broken into 10 second clips.
 They can listen to the clips as many times as they want but once the game starts they have 10 seconds
 to submit the clips in the correct order. If a clip is submitted out of order or fail to submit a frame
 in 10 seconds they loose and must start over. To start a player needs a teamname, they can play alone or
