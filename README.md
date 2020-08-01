@@ -5,11 +5,11 @@ by Tanisha Babic, Jonathan Muniz-Murguia, Darien Cruz-Nguyen
 
 # Description
 
-In this game the player must put together a song that is broken down into 10 second clips.
-They can listen to the clips as many times as they want but once the game starts they have 10 seconds
+In this game, the player must put together a song that is broken down into 10-second clips.
+They can listen to the clips as often as they want, but once the game starts, they have 10 seconds
 to submit the clips in the correct order. If a clip is submitted out of order or the player fails to 
-submit a frame in 10 seconds they loose and must start over. To start a player needs a username, 
-teamname and room number. They can play alone or as a team. There is a chat provided for players to 
+submit a frame in 10 seconds, they lose and must start over. To start, a player needs a username, 
+team name, and room number. They can play alone or as a team. There is a chat provided for players to 
 communicate with their team or with the room's admin. To learn more about how to play and about admin 
 controls, login and click on the `?`.
 
@@ -17,19 +17,19 @@ controls, login and click on the `?`.
 
 # Admin Instructions
 
-To login as admin you must input an admin token in the teamname field. 
+To login as admin you input an admin token into the teamname field. 
 
-To get your admin tokens goto the file `server.py` line `24`.
+To get your admin tokens go to file `server.py` line `24`.
 
-The default list of admin tokens should look like this 
+The default list of admin tokens should look like: 
 
 - `adminTokens = ['20foUWSN', '9AhXLJJB', 'kXsMmuID', 'iipcCtCw', 'BDqprSyj']`.
 
 CHANGE THESE VALUES BEFORE RUNNING THE SERVER SINCE THIS DOCUMENT IS PUBLIC (only numbers and letters)
 
-You're able to modify this array of tokens without breaking the code.
+You are able to modify this array of tokens without breaking the code.
 
-IF the code does break after modifing these values, the following link can help you fix it
+**IF** the code does break after modifing these values, the following link can help you fix it
 
 - https://www.w3schools.com/python/python_arrays.asp
 
@@ -37,19 +37,11 @@ IF the code does break after modifing these values, the following link can help 
 
 # Google Cloud Platform Set Up
 
-## Helpfull Links ##
-
-SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
-
-Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
-
-SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-forma
-
 ## VM Setup ##
 
-**Step 1: GCP Project Set Up Instructions**
+**Step 1: GCP Project Set Up**
 
-Make sure you have credits on GCP
+**Before advancing**, be sure to work on an account with adequate credits!
 
 Create project
 - Click -> project drop down menu (3rd button in header)
@@ -83,13 +75,13 @@ Instance Values to Change:
 **Step 3: Creating a MySQL Database Instance**
 
 Enable SQL Admin API and create a DB Instance
-- Click -> Cloud SQL Admin API
-- Click -> Enable
+- Click ->  Cloud SQL Admin API
+- Click ->  Enable
 - Search -> Cloud SQL
-- Click -> Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
-- Click -> GO TO CLOUD SQL
-- Click -> CREATE INSTANCE
-- Click -> Choose MySQL
+- Click ->  Cloud SQL (THE ONE WITH THE SHOPPING CART NOT THE ONE WITH THE API LOGO)
+- Click ->  GO TO CLOUD SQL
+- Click ->  CREATE INSTANCE
+- Click ->  Choose MySQL
 
 Instance Values to Change:
 
@@ -97,16 +89,16 @@ Instance Values to Change:
     Root password: Click on Generate (copy and save the password somewhere you can access later)
 
 - Click -> Create
-- Wait... (until green check mark appears next to Instance ID)
+- Wait... (When the green check mark appears next to Instance ID)
 - Click -> packethero-db
 - Ctrl + f -> Connect using Cloud Shell
 - Open up the terminal (5th to last button in header)
-- Wait... (until terminal loads, try refreshing page if it takes a while)
+- Wait... (When the terminal loads, try refreshing page if it takes a while)
 
 
 **Step 4: Creating Database Tables**
 
-After your terminal has loaded access your database
+After your terminal has loaded, access your database
 
 You can do this in the terminal with this command
     
@@ -232,7 +224,7 @@ Run the following commands
 
 **Step 9: SSL Cert**
 
-You will have connection errors without and SSL Cert 
+You will have connection errors without SSL Cert 
 
 It's important to do this step before accessing the website
 
@@ -261,3 +253,11 @@ Next, goto the top of this document and read the Admin Instructions section to l
 After you modify the admin token array, you can start the server by running `./run.sh` when you are on `~/`
 
 You should now be able to access the website
+
+## Helpfull Links ##
+
+SSL Cert: https://certbot.eff.org/lets-encrypt/debianbuster-nginx
+
+Nginx-SocketIO: https://github.com/miguelgrinberg/Flask-SocketIO/issues/826
+
+SQLAlchemy: https://flask-sqlalchemy.palletsprojects.com/en/2.x/config/#connection-uri-forma
