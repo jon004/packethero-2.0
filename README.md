@@ -143,7 +143,7 @@ Run these commands:
     sudo apt-get -y update
     sudo apt-get -y upgrade
     sudo apt-get -y install python3 python3-pip python3-dev nginx git-all ufw
-    git clone https://github.com/yonJM1267/packethero-2.0.git
+    git clone https://github.com/jon004/packethero-2.0.git
     sudo pip3 install flask flask_socketio flask_login flask_wtf wtforms eventlet sqlalchemy flask_sqlalchemy pymysql uwsgi
 
 ## DB Connection ##
